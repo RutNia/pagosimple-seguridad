@@ -18,3 +18,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+import random
+
+def generar_otp():
+    return str(random.randint(100000, 999999))
+
+def validar_otp(otp_ingresado, otp_generado):
+    return otp_ingresado == otp_generado
