@@ -1,7 +1,8 @@
 """
 PagoSimple - Sistema Transaccional
 Modulo de Login y Seguridad
-Responsable del proyecto: [Tu nombre] (Lider de Proyecto)
+Version final del proyecto - v1.5
+Revisado y optimizado por [Tu nombre] (Lider de Proyecto)
 """
 
 def validar_password(password):
@@ -12,12 +13,6 @@ def validar_password(password):
     if not any(c.isdigit() for c in password):
         return False, "Debe incluir al menos un numero"
     return True, "Contrasena valida"
-
-def main():
-    print("Sistema PagoSimple en construccion...")
-
-if __name__ == "__main__":
-    main()
 
 import random
 
@@ -34,3 +29,9 @@ def verificar_intentos(usuario):
     if intentos >= 5:
         return False, "Cuenta bloqueada temporalmente por multiples intentos fallidos"
     return True, "Puede continuar"
+
+def main():
+    print("Sistema PagoSimple listo para uso.")
+
+if __name__ == "__main__":
+    main()
