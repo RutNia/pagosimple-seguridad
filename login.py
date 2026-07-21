@@ -26,3 +26,11 @@ def generar_otp():
 
 def validar_otp(otp_ingresado, otp_generado):
     return otp_ingresado == otp_generado
+
+intentos_fallidos = {}
+
+def verificar_intentos(usuario):
+    intentos = intentos_fallidos.get(usuario, 0)
+    if intentos >= 5:
+        return False, "Cuenta bloqueada temporalmente por multiples intentos fallidos"
+    return True, "Puede continuar"
